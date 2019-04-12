@@ -26,6 +26,11 @@ class ShiController extends Controller
         return view('shi.create');
     }
     public function store(){
+        $this->validate(requset(),[
+            'name'=> 'required',
+            'description'=>'required'
+
+            ]);
         dd(request());
         $data =request()->all();
         $shi =new Shi();
