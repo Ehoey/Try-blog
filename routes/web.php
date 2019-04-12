@@ -14,6 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('shi', 'ShiController@index');
+Route::get('/shi', 'ShiController@index');
 
-Route::get('shi/{shi}','ShiController@show');
+Route::get('/shi/{shi}','ShiController@show');
+
+Route::get('/new-shi','Shi Controller@create');
+
+Route::post('store-shi','ShiController@store');

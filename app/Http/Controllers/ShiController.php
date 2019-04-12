@@ -21,4 +21,19 @@ class ShiController extends Controller
 
         return view('shi.show')->with('shi',$shiId);
     }
+
+    public function create(){
+        return view('shi.create');
+    }
+    public function store(){
+        dd(request());
+        $data =request()->all();
+        $shi =new Shi();
+        $shi->name =$data['name'];
+        $shi->description =$data['description'];
+        $shi->compeleted -fales;
+        $shi->save();
+
+        return redirect('/shi');
+    }
 }
