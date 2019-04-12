@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 Route::get('shi', 'ShiController@index');
 
+Route::get('shi/{shi}','ShiController@show');

@@ -12,6 +12,6 @@ class ShiSeeder extends Seeder
     public function run()
     {
         //
-        factory(App\Shi::class ,10)->create();
+        factory(App\Shi::class ,5)->create();
     }
 }
